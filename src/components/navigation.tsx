@@ -6,6 +6,7 @@ import { Section } from '@/components/ui/section';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { motion } from 'framer-motion';
 import { Menu } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { DashboardButton } from './dashboard-button';
@@ -31,9 +32,7 @@ export function Navigation() {
               whileTap={{ scale: 0.95 }}
               className="flex items-center space-x-2"
             >
-              <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
-                <span className="text-sm font-bold">P</span>
-              </div>
+              <Image src="/logo.png" alt="Peaknode" width={64} height={64} />
               <span className="text-xl font-bold">Peaknode</span>
             </motion.div>
           </Link>

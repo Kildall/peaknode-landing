@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://peaknode.com/sitemap.xml',
+    sitemap: 'https://peaknode.app/sitemap.xml',
   };
 } 

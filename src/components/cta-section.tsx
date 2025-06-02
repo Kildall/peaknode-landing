@@ -3,9 +3,9 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { motion, useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { ArrowRight, Mail, Calendar, MessageCircle } from 'lucide-react';
+import { ArrowRight, Calendar, Mail, MessageCircle } from 'lucide-react';
 import Link from 'next/link';
+import { useRef } from 'react';
 
 export function CTASection() {
   const ref = useRef(null);
@@ -64,7 +64,7 @@ export function CTASection() {
                   platform.
                 </p>
                 <Button className="w-full group" asChild>
-                  <Link href="mailto:demo@peaknode.com?subject=Demo Request">
+                  <Link href="mailto:demo@peaknode.app?subject=Demo Request">
                     Schedule Demo
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
@@ -80,7 +80,7 @@ export function CTASection() {
                   Speak with our team about enterprise solutions and partnership opportunities.
                 </p>
                 <Button variant="outline" className="w-full" asChild>
-                  <Link href="mailto:sales@peaknode.com?subject=Sales Inquiry">Contact Sales</Link>
+                  <Link href="mailto:sales@peaknode.app?subject=Sales Inquiry">Contact Sales</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -93,7 +93,7 @@ export function CTASection() {
                   Be among the first to experience Peaknode when we launch in Q3 2025.
                 </p>
                 <Button variant="outline" className="w-full" asChild>
-                  <Link href="mailto:early-access@peaknode.com?subject=Early Access Request">
+                  <Link href="mailto:early-access@peaknode.app?subject=Early Access Request">
                     Join Waitlist
                   </Link>
                 </Button>

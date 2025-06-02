@@ -1,8 +1,9 @@
 'use client';
 
 import { Separator } from '@/components/ui/separator';
+import { FileText, MessageCircle, Shield } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { Shield, Mail, MessageCircle, FileText } from 'lucide-react';
 
 const footerLinks = {
   company: [
@@ -24,10 +25,10 @@ const footerLinks = {
     { name: 'Blog', href: '#' },
   ],
   contact: [
-    { name: 'Request Demo', href: 'mailto:demo@peaknode.com?subject=Demo Request' },
-    { name: 'Sales Inquiry', href: 'mailto:sales@peaknode.com?subject=Sales Inquiry' },
-    { name: 'Early Access', href: 'mailto:early-access@peaknode.com?subject=Early Access Request' },
-    { name: 'Support', href: 'mailto:support@peaknode.com?subject=Support Request' },
+    { name: 'Request Demo', href: 'mailto:demo@peaknode.app?subject=Demo Request' },
+    { name: 'Sales Inquiry', href: 'mailto:sales@peaknode.app?subject=Sales Inquiry' },
+    { name: 'Early Access', href: 'mailto:early-access@peaknode.app?subject=Early Access Request' },
+    { name: 'Support', href: 'mailto:support@peaknode.app?subject=Support Request' },
   ],
 };
 
@@ -38,10 +39,8 @@ export function Footer() {
         <div className="grid gap-8 lg:grid-cols-4">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
-                <span className="text-sm font-bold">P</span>
-              </div>
+            <Link href="/" className="flex items-center space-x-2">
+              <Image src="/logo.png" alt="Peaknode" width={96} height={96} />
               <span className="text-xl font-bold">Peaknode</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
@@ -111,7 +110,9 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
-            <p className="text-xs text-muted-foreground">© 2024 Peaknode. All rights reserved.</p>
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} Peaknode. All rights reserved.
+            </p>
             <div className="flex items-center gap-4 text-xs text-muted-foreground">
               <Link href="#" className="hover:text-primary transition-colors">
                 Privacy Policy

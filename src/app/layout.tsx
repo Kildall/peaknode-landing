@@ -38,14 +38,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://peaknode.com'),
+  metadataBase: new URL('https://peaknode.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://peaknode.com',
+    url: 'https://peaknode.app',
     title: 'Peaknode - Blockchain Transparency Made Simple',
     description:
       'Transform blockchain complexity into financial clarity with institutional-grade proof-of-reserves solutions.',
@@ -96,7 +96,15 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}`}
         suppressHydrationWarning
       >
-        <head />
+        <head>
+          <link rel="icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+          <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+          <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+          <link rel="android-chrome" href="/android-chrome-192x192.png" sizes="192x192" />
+          <link rel="android-chrome" href="/android-chrome-512x512.png" sizes="512x512" />
+          <link rel="manifest" href="/site.webmanifest" />
+        </head>
         <body>
           <ThemeProvider
             attribute="class"

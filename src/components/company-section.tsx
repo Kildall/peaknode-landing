@@ -1,11 +1,11 @@
 'use client';
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Progress } from '@/components/ui/progress';
 import { motion, useInView } from 'framer-motion';
+import { CheckCircle, Clock, Eye, Rocket, Target, Users } from 'lucide-react';
 import { useRef } from 'react';
-import { Target, Eye, Heart, CheckCircle, Clock, Calendar, Rocket, Users } from 'lucide-react';
 
 const values = [
   {
@@ -40,35 +40,35 @@ const milestones = [
     status: 'completed',
     progress: 100,
     icon: CheckCircle,
-    date: 'Q1 2024',
+    date: 'Q2 2025',
   },
   {
     title: 'Initial proof-of-concept completed',
-    status: 'completed',
-    progress: 100,
+    status: 'in-progress',
+    progress: 25,
     icon: CheckCircle,
-    date: 'Q2 2024',
+    date: 'Q3 2025',
   },
   {
     title: 'Beta testing with select partners',
-    status: 'in-progress',
-    progress: 75,
+    status: 'planned',
+    progress: 0,
     icon: Clock,
-    date: 'Q4 2024',
+    date: 'Q4 2025',
   },
   {
     title: 'Public launch',
     status: 'planned',
     progress: 0,
     icon: Rocket,
-    date: 'Q3 2025',
+    date: 'Q1 2026',
   },
   {
     title: 'Enterprise partnerships',
     status: 'planned',
     progress: 0,
     icon: Users,
-    date: 'Q4 2025',
+    date: 'Q2 2026',
   },
 ];
 
@@ -259,8 +259,8 @@ export function CompanySection() {
             >
               <h4 className="font-semibold mb-2">Current Status</h4>
               <p className="text-muted-foreground">
-                Peaknode is in advanced development, with core cryptographic protocols tested and
-                initial partnerships being established. We're moving from concept to market-ready
+                Peaknode is in development, with core cryptographic protocols tested and initial
+                partnerships being established. We&apos;re moving from concept to market-ready
                 solution.
               </p>
             </motion.div>
