@@ -116,7 +116,41 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Grid background pattern */
+  .bg-grid-slate-900\/\[0\.04\] {
+    background-image: radial-gradient(circle, rgb(15 23 42 / 0.04) 1px, transparent 1px);
+  }
+  
+  .dark .bg-grid-slate-900\/\[0\.04\] {
+    background-image: radial-gradient(circle, rgb(248 250 252 / 0.04) 1px, transparent 1px);
+  }
+  
+  /* Animation utilities */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(10px);
+    }
   }
 }

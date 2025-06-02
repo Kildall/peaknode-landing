@@ -2,6 +2,8 @@
   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll": "always"
-  }
+    "source.fixAll": "always",
+    "source.organizeImports": "always"	
+  },
+  "typescript.preferences.importModuleSpecifier": "relative"
 }

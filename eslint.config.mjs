@@ -12,13 +12,6 @@ export default tseslint.config(
     languageOptions: {
       ecmaVersion: 2021,
       sourceType: 'module',
-      parser: tseslint.parser,
-      parserOptions: {
-        project: './tsconfig.json',
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
     },
     plugins: {
       '@typescript-eslint': tseslint.plugin,
@@ -29,6 +22,18 @@ export default tseslint.config(
     settings: {
       react: {
         version: 'detect',
+      },
+    },
+  },
+  {
+    files: ['**/*.{ts,tsx}'],
+    languageOptions: {
+      parser: tseslint.parser,
+      parserOptions: {
+        project: './tsconfig.json',
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
   },
