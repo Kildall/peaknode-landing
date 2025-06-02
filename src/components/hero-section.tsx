@@ -1,10 +1,10 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Section } from '@/components/ui/section';
 import { motion, useInView } from 'framer-motion';
-import { ArrowRight, Shield, Eye, Lock } from 'lucide-react';
+import { ArrowRight, Eye, Lock, Shield } from 'lucide-react';
 import Link from 'next/link';
 import { useRef } from 'react';
 
@@ -46,7 +46,7 @@ export function HeroSection() {
   };
 
   return (
-    <Section className="pt-12 pb-4 sm:py-16 overflow-hidden">
+    <Section className="pt-12 pb-4 sm:py-16 overflow-hidden" id="hero">
       <motion.div
         ref={ref}
         variants={containerVariants}

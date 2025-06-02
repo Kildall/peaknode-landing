@@ -1,22 +1,22 @@
 'use client';
 
-import { useCallback, useEffect, useState } from 'react';
-import useEmblaCarousel from 'embla-carousel-react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+import useEmblaCarousel from 'embla-carousel-react';
+import { AnimatePresence, motion } from 'framer-motion';
 import {
-  Upload,
-  Cpu,
-  Shield,
-  FileCheck,
-  Zap,
-  Clock,
   ChevronLeft,
   ChevronRight,
+  Clock,
+  Cpu,
+  FileCheck,
+  Shield,
+  Upload,
+  Zap,
 } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { useCallback, useEffect, useState } from 'react';
 import { Section } from './ui/section';
 
 const steps = [
@@ -108,7 +108,7 @@ export function HowItWorksSection() {
   const renderStepCard = (step: (typeof steps)[number], index: number) => {
     const isSelected = index === selectedIndex;
     return (
-      <div className="flex-[0_0_100%] min-w-0 px-4 sm:px-6 lg:px-8" key={step.id}>
+      <div className="flex-[0_0_100%] min-w-0 px-8 sm:px-12 lg:px-16" key={step.id}>
         <Card
           className={cn(
             'transition-all duration-300',
@@ -344,7 +344,7 @@ export function HowItWorksSection() {
 
       {/* Carousel section */}
       <div className="relative mb-12">
-        <div className={cn('overflow-hidden rounded-lg', 'lg:border lg:bg-card')} ref={emblaRef}>
+        <div className={cn('overflow-hidden')} ref={emblaRef}>
           <div className="flex py-6">{steps.map((step, index) => renderStepCard(step, index))}</div>
         </div>
 
